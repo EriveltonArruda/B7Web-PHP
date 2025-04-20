@@ -1,0 +1,111 @@
+## Ping.php
+
+- Toda conexão com o banco de dados será feita no arquivo config.php
+
+- Dentro da pasta api teremos um arquivo chamado ping.php, usaremos ele para testar a api no resttest, esse arquivo vai ter que retornar um pong no teste.
+
+- Toda api sempre tem que retornar um JSON, seja vazio, com erro, aviso ou os dados.
+- Então criamos um array vazio para ser retornado
+  -- $array = [].
+
+- Entre o array vazio e o retorno, colocamos o conteúdo do array.
+  -- $array['pong'] = true;
+
+- Para retornar o array utilizamos uma função que transforma array em JSON (json_encode)
+  -- echo json_encode($array);
+
+## Erro de CORS
+
+O CORS é uma proteção de requisição HTTP, um site não pode fazer uma requisição para outro site sem que esse outro site tenha permitido essa requisição.
+
+- Para resolver o erro de CORS precisamos criar uma permissão para que outros sites tenham acesso à nossa API.
+  -- header("Access-Control-Allow-Origin: *") // O asterísco representa todo mundo, se fosse um domínio específico, então era só colocar ele.
+  
+- Vamos liberar também os métodos de requisição, por padrão todo site permite GET e POST.
+  -- header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
+
+- O retorno sempre será em Json, então crio uma proteção para o retorno ser em JSON:
+  -- header("Content-Type: application/json");
+
+- Como essas proteções vão ser repetidas em todos os arquivos, colocamos eles em um arquivo chamado return.php e puxamos esse arquivo depois do meu array['pong'].
+
+- É interessante que você coloque o array vazio dentro do arquivo config.php e também deixar uma estrutura padrão de resposta no array vazio que está no arquivo config.php
+  -- $array = [
+  'error' => '',
+  'result' => []
+  ];
+
+- Faça o mesmo no array que tem o resultado de pong, assim pong será associado ao 'result'
+  -- $array['result'] = [
+  'pong' => true
+  ];
+
+------------------------------------------------------------------------
+## getall.php
+
+- A variável global $_SERVER['REQUEST_METHOD'] verifica o método utilizado
+
+Entendendo melhor minha verificação
+
+$method = strtolower($_SERVER['REQUEST_METHOD']);
+// Verificando o método
+if ($method === 'get') {
+  // Se for get, faça uma consulta no banco notes
+  $sql = $pdo->query("SELECT * FROM notes");
+  // Verificando se obteve resultado
+  if ($sql->rowCount() > 0) {
+    // Se encontrou resultado, adiciono em $data
+    $data = $sql->fetchall(PDO::FETCH_ASSOC);
+
+    // Preenchendo os dados do banco no result do array de retorno, uso o foreach para adicionar os dados de cada resultado dentro do meu array.
+    foreach ($data as $item) {
+      $array['result'][] = [
+        'id' => $item['id'],
+        'title' => $item['title']
+      ];
+    }
+  }
+} else {
+  // Se o método for diferente de POST, adiciono o erro no meu array de retorno.
+  $array['error'] = 'Método não permitido (Apenas GET)';
+}
+
+------------------------------------------------------------
+## get.php
+
+A estrutura é parecida com a do getall
+
+$method = strtolower($_SERVER['REQUEST_METHOD']);
+
+if ($method === 'get') {
+  // pegamos o id
+  $id = filter_input(INPUT_GET, 'id');
+  // Se o id existir
+  if ($id) {
+    // vamos pegar os dados dele
+    $sql = $pdo->prepare("SELECT * FROM notes WHERE id = :id");
+    $sql->bindValue(':id', $id);
+    $sql->execute();
+
+    // Se teve algum resultado de id no banco de dados
+    if ($sql->rowCount() > 0) {
+      // Pegamos o dado
+      $data = $sql->fetch(PDO::FETCH_ASSOC);
+      // Preenchemos os dados no array de resposta.
+      $array['result'] = [
+        'id' => $data['id'],
+        'title' => $data['title'],
+        'body' => $data['body']
+      ];
+    } else {
+      $array['error'] = 'ID Inexistente';
+    }
+  } else {
+    $array['error'] = 'ID não enviado';
+  }
+} else {
+  $array['error'] = 'Método não permitido (Apenas GET)';
+}
+
+-------------------------------------------------------------
+## insert.php

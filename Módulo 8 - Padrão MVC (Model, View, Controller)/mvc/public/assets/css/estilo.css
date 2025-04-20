@@ -1,0 +1,35 @@
+body {
+  font-family:Helvetica;
+  font-size:13px;
+  margin:20px;
+}
+
+table {
+  margin-top:20px;
+}
+
+table th {
+  padding:10px;
+  background-color:#999;
+  font-size: 15px;
+}
+
+table tr td {
+  padding:10px;
+}
+
+table tr:hover td {
+  background-color:#EEE;
+}
+
+.btn {
+  background-color: #0a0a0a;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #000;
+}

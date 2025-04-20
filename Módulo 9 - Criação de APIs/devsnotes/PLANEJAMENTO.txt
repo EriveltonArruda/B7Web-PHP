@@ -1,0 +1,42 @@
+# DEVSNOTES: (Sistema de anotações simples)
+
+## O que o projeto precisa fazer?
+
+- Listar as anotações
+- Pegar informações de UMA anotação
+- Inserir uma anotação nova
+- Atualizar uma anotação existente
+- Deletar uma anotação
+
+## Qual a estrutura de dados?
+
+- Local para armazenar as anotações
+  -- id (id da anotação)
+  -- title (título da anotação)
+  -- body (a própria anotação)
+
+## Quais os endpoints?
+
+Cada endpoint abaixo corresponde as ações que o projeto precisa fazer
+
+- (METODO) /url (PARÂMETROS (caso precise))
+
+- (GET) /api/notes - /api/getall.php
+- (GET) /api/note/123 - /api/get.php?id=123
+- (POST) /api/note - /api/insert.php (title, body)
+- (PUT) /api/note/123 - /api/update.php (id, title, body)
+- (DELETE) /api/note/123 - /api/delete.php (id)
+
+## Informações importantes
+
+Como o projeto será feito em PHP estrutural, vamos utilizar arquivos no lugar de urls para não utilizar htaccess e etc, os métodos serão os mesmos, só mudarão as urls mesmo, que antes iriam ser feitos por links e agora serão feitos por arquivos.
+
+No arquivo /api/get.php?id=123, os dados serão mandados por query string.
+
+No arquivo /api/insert.php, os parâmetros (title e body) serão enviados internamente via POST.
+
+No arquivo /api/update.php, os parâmetros (id, title e body) serão enviados via o método PUT no corpo da requisição.
+
+No arquivo /api/delete.php, vamos mandar o id pelo corpo da requisição.
+
+Testaremos a API pelo site resttesttest.com
