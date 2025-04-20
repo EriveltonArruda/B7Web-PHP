@@ -16,3 +16,9 @@ while ($numero < 10) {
 
   $numero += 1;
 }
+
+// iterar números
+// Adicionar um número à uma variável no loop
+$numero = $numero + 1; // a variável receberá o valor atual + 1;
+$numero += 1; // pega o valor que já tem e adiciona mais 1;
+$numero++; // Adiciona mais um;

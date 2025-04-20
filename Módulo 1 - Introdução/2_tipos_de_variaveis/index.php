@@ -10,12 +10,16 @@ $x = 10; // x vai receber o valor de 10
 echo $x + 2;
 */
 
-/* 
+/* Variáveis criadas não podem ter caracteres especiais
+$%variavel; // NÃO PODE
+$!variavel; // NÃO PODE
+$variavel 2; // NÃO PODE
 $1numero (não pode)
 $numero 1 (não pode)
 $numero1 = 20; // Pode usar desse jeito.
 */
 
+// Podemos usar camelCase ou snake_case
 /* camelCase com números quebrados e negativos
 $totalDaSoma = -10.5;
 */

@@ -1,4 +1,5 @@
 <?php
+// Loop foreach é utilizado em arrays
 $ingredientes = [
   'açucar',
   'farinha de trigo',

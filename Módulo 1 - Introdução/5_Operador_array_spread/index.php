@@ -1,4 +1,5 @@
 <?php
+// opeador spread copia os itens de um array selecionado.
 $bolo1 = ['açúcar', 'farinha de trigo', 'ovo', 'leite', 'fermento em pó'];
 
 // utilizando o spread referenciando o array $bolo1 para pegar os valores de $bolo1 e adicionando o corante, assim $bolo2 terá os mesmos itens de $bolo1 e adicionará o corante.

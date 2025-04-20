@@ -19,6 +19,7 @@ echo $nomeCompleto;
 */
 
 // NULL CAO
+/* Imagine que no seu código você criou uma variável com o nome e lá na frente criou uma variável com o nome completo (nome e sobrenome), mas você não criou o sobrenome ainda, isso ocasionará em um erro de variável indefinida em $sobrenome.*/
 /*
 $nome = 'Erivelton';
 $sobrenome = 'Rodrigues';

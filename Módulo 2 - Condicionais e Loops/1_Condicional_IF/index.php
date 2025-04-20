@@ -14,3 +14,25 @@ if ($idade >= 18) {
 } else {
   echo "Menor de idade";
 }
+
+// Exemplo utilizando carteira de motorista
+if ($idade >= 18) {
+  echo 'Maior de idade, apto à tirar carteira';
+} else {
+  echo 'Menor de idade, inapto à tirar carteira';
+}
+
+// Resultado: Maior de idade, apto à tirar carteira.
+
+/*
+Lista de condicionais
+
+x < y (maior que)
+x > y (menor que)
+
+x == y (igual à)
+x !=y (diferente de)
+
+x >= y (maior ou igual)
+x <= y (menor ou igual)
+*/

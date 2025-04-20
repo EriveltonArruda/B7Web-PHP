@@ -1,5 +1,6 @@
 <?php
 $idade = 18;
+// (Condição) ? RESULTADO POSITIVO : RESULTADO NEGATIVO;
 
 // if de exemplo para ser reconstruído no ternário.
 if ($idade >= 18) {
