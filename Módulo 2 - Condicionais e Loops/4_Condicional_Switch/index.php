@@ -12,7 +12,7 @@ if ($tipo == 'texto') {
 */
 
 // primeiro crio a variável
-$tipo = 'foto';
+$tipo = 'instagram';
 
 // em seguida faço a seleção de casos
 switch ($tipo) {
@@ -28,7 +28,10 @@ switch ($tipo) {
   case 'texto':
     echo 'Exibindo TEXTO';
     break;
-}
+  // Sempre é bom ter um valor "padrão" para caso seja passado um valor que não está dentro do switch.
+  default:
+    echo 'Você não inseriu nenhuma das opções, apenas são permitidos: FOTO, VIDEO, TEXTO';
+};
 
 /*
 Resultado:
