@@ -1,5 +1,6 @@
 <?php
 // Uma função recursiva basicamente significa uma função que executa ela mesma internamente. 
+
 // Função que vai dividir o número por 2 usando ela mesma até chegar em 0
 // criação da função com um parâmetro
 function dividir($numero) {

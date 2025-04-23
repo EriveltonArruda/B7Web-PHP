@@ -13,7 +13,7 @@ $dizimo = function($valor) {
 
 /* estrutura da arrow:
 como é uma função anônima, vamos associar ela à uma variável, então criamos a 
-variável, colocamos fn() e dentro do parênteses colocamos o parâmetro.
+variável ($dizimo), colocamos fn() e dentro do parênteses de fn() colocamos o parâmetro.
 Após a seta nós colocamos o que em uma função normal seria o return */
 
 $dizimo = fn($valor) => $valor * 0.1; // depois da seta seria o return

@@ -19,17 +19,16 @@ echo $funcao(82); // Resultado: 8.2;
 
 // Parâmetro em outra função
 /* Estrutura:
-Primeiro parâmetro: Valor que receberá a função.
+Primeiro parâmetro: Valor que receberá a função (10).
 Segundo Parâmetro: função que vai agir em cima do primeiro parâmetro. */
-algumafuncao(10, function() {
-	return $valor * 0.1;
+$algumaFuncao(10, function () {
+  ...
 });
-_____________________________________________________________________________
 
 /* também poderia armazenar a funcao dentro de uma variável e usar essa 
 variável como parâmetro */
-$funcao2 = function(int $valor){
-  return $valor * 0.1;
+$outraFuncao = function (int $valor) {
+  ...
 };
 // Exemplo
-algumafuncao(10, $funcao2); /* essa função no parâmetro será usada no número que está como primeiro parâmetro, nesse caso o 10; */
+algumaFuncao(10, $outraFuncao); /* essa função no parâmetro será usada no número que está como primeiro parâmetro, nesse caso o 10; */

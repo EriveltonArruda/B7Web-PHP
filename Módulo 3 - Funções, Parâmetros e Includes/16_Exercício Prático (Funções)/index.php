@@ -53,7 +53,7 @@ diaDaSemana('2023/04/24'); // Resultado: 24/04/2023 - Segunda-Feira
 // SOLUÇÃO 2
 $data = '2023/04/24';
 
-function diaDaSemanA(string $data) {
+function diaDaSemana2(string $data) {
 
   echo date("d/m/Y - ", strtotime($data));
 
@@ -85,4 +85,4 @@ function diaDaSemanA(string $data) {
   }
 };
 
-echo diaDaSemanA($data); // Resultado: 24/04/2023 - Segunda-Feira
+echo diaDaSemana2($data); // Resultado: 24/04/2023 - Segunda-Feira
