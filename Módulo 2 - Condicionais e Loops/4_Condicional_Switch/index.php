@@ -1,7 +1,4 @@
 <?php
-// primeiro crio a variável
-$tipo = 'foto';
-
 /* Esse bloco será recriado no Switch
 if ($tipo == 'foto') {
   echo 'Exibindo uma foto';
@@ -14,6 +11,8 @@ if ($tipo == 'texto') {
 }
 */
 
+// primeiro crio a variável
+$tipo = 'foto';
 
 // em seguida faço a seleção de casos
 switch ($tipo) {
