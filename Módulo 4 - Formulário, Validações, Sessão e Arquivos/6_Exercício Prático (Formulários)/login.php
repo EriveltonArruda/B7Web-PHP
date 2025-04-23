@@ -14,8 +14,7 @@ session_start();
     if (!empty($_SESSION['erro'])) {
         echo $_SESSION['erro'];
 
-        // Na linha abaixo, destruimos a variavel depois de exibir o erro.
-        // unset() destrói as variáveis especificadas.
+        // Na linha abaixo, destruimos a variavel depois de exibir o erro. unset() destrói as variáveis especificadas.
         unset($_SESSION['erro']);
     }
     ?>

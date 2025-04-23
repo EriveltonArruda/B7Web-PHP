@@ -22,7 +22,7 @@ if (empty($_SESSION['nome'])) {
 </head>
 
 <body>
-    <!-- Para que a sessão pegue o nome de usuário, é preciso mandar um echo e a sessão, assim se toda a validação deu certo, ela vai aparecer com o nome do usuário porque já foi coletado esse dado no formulário. -->
+    <!-- Para que a sessão pegue o nome de usuário, é preciso mandar um echo com a sessão, assim se toda a validação deu certo, ela vai aparecer com o nome do usuário porque já foi coletado esse dado no formulário. -->
     <h1>Olá, <?php echo $_SESSION['nome']; ?> - <a href="sair.php">Sair</a></h1>
 </body>
 
