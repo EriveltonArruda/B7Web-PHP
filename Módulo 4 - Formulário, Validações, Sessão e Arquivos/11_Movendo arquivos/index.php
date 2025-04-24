@@ -17,7 +17,6 @@ Mudando o arquivo teste2 da pasta raiz para a pasta com o nome pasta, então
 coloco o caminho dessa pasta de destino no segundo parâmetro */
 rename('teste2.txt', 'pasta/teste2.txt');
 
-
 /* Parâmetros de copy para COPIAR um arquivo
 1º A origem do arquivo
 2º O destino para onde quero colocar a cópia

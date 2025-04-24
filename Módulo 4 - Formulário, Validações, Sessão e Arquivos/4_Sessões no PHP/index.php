@@ -11,6 +11,7 @@ não colocar as informações corretas e o meu recebedor não validar,
 o $_SESSION['aviso'] será ativado e o erro será exibido aqui no meu index. */
 if ($_SESSION['aviso']) {
   echo $_SESSION['aviso'];
+
   // em seguida eu zero a sessão para que a mensagem saia do index, caso contrário a mensagem ficará sendo exibida sempre.
   $_SESSION['aviso'] = '';
 }

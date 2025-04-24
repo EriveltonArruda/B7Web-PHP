@@ -24,8 +24,10 @@ echo "Arquivo criado com sucesso! <br/>";
 // Podemos adicionar textos em arquivos que já contém outros textos, por exemplo:
 // Lendo o conteúdo de texto.txt
 $texto = file_get_contents('texto.txt');
+
 // Adicionando uma nova linha com um novo texto dentro do arquivo texto.txt
 $texto .= "\nPHP Não está morto e é ótimo para conseguir a primeira vaga! <br/>";
+
 // Salvando o conteúdo novo no meu arquivo texto.txt junto do texto que já tinha antes
 file_put_contents('texto.txt', $texto);
 

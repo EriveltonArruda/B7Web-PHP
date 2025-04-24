@@ -15,6 +15,7 @@ echo $texto;
 
 // Podemos manipular o texto usando o explode() //
 $texto = file_get_contents('texto.txt');
+
 /* Quebrando o texto por linha com o \n e ao passar $texto no parâmetro do 
 explode, meu $texto agora vai virar um array */
 $texto = explode("\n", $texto);

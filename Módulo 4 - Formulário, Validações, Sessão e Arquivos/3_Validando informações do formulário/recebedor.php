@@ -18,8 +18,10 @@ FILTER_SANITIZE_NUMBER_INT // (sanitiza mas não valida), caso passem 32 anos no
 FILTER_SANITIZE_NUMBER_FLOAT // Para números "quebrados" 10.50 por exemplo
 */
 $nome = filter_input(INPUT_POST, "nome");
+
 // Precisamos usar um filtro para impedir que alguém digite um número, assim só vai aceitar (nome@dominio).
 $email = filter_input(INPUT_POST, "email", FILTER_VALIDATE_EMAIL);
+
 // validando a idade com número INT, só vai ser validado se passar com número inteiro
 $idade = filter_input(INPUT_POST, "idade", FILTER_VALIDATE_INT);
 

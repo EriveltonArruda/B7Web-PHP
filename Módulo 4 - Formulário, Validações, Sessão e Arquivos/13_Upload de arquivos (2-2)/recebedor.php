@@ -20,11 +20,14 @@ um arquivo de upload) e dentro de ['arquivo'] eu pego o tipo ['type'], como
 segundo parâmetro da função eu pego a lista de imagens que serão permitidas,
 essa lista está dentro da minha variável $permitidos */
 if (in_array($_FILES['arquivo']['type'], $permitidos)) {
+
   /* se for feito o upload de um arquivo de imagem que tenha os mimetypes
 que estão na lista de permitidos, ele vai passar e vai ter um nome gerado */
   $nome = md5(time() . rand(0, 1000)) . '.jpg';
+
   // em seguida o arquivo será movido da pasta temporária para a pasta arquivos.
   move_uploaded_file($_FILES['arquivo']['tmp_name'], 'arquivos/' . $nome);
+
   // Se tudo deu certo, é exibida a mensagem
   echo "Arquivo salvo com sucesso!";
 } else {
