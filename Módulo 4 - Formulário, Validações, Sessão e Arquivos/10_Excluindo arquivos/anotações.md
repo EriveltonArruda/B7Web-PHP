@@ -1,0 +1,1 @@
+Muito cuidado ao usar esse tipo de recurso porque quando o arquivo é excluído, não tem como recuperar.

@@ -17,12 +17,13 @@ $email = filter_input(INPUT_POST, "email", FILTER_VALIDATE_EMAIL);
 $idade = filter_input(INPUT_POST, "idade", FILTER_VALIDATE_INT);
 
 if ($nome && $email && $idade) {
-  /* #expiracao é a validade do cookie, a representação de 1 dia em milisegundos é 86400, então eu vou multiplicar 
-  por 30 para meu cookie ter a validade de 1 mês */
+  /* $expiracao é a validade do cookie, a representação de 1 dia em milisegundos é 86400, 
+  então eu vou multiplicar   por 30 para meu cookie ter a validade de 1 mês */
   $expiracao = time() + (86400 * 30);
 
-  /* uso o set cookie, defino seu nome ('nome') , uso a variável onde o cookie 
-  vai ficar armazenado ($nome) e em seguida coloco sua validade ($expiracao) */
+  /* uso o set cookie, defino seu nome ('nome'), 
+  uso a variável onde o cookie   vai ficar armazenado ($nome) 
+  e em seguida coloco sua validade ($expiracao) */
   setcookie('nome', $nome, $expiracao);
 
   echo "NOME: " . $nome . "<br/>";

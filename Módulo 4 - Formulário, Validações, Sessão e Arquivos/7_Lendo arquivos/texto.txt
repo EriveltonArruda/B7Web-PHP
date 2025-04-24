@@ -1,0 +1,4 @@
+Aqui nesse arquivo de texto <br/>
+vou colocar um texto qualquer <br/>
+só para demonstrar como funciona <br/>
+a leitura de textos em php <br/>
