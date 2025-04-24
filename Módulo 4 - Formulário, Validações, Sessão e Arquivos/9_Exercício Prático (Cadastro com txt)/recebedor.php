@@ -11,13 +11,13 @@ if ($nomes) { // se houver algum dado na variável $nomes, faça isso:
   // Adicionando uma nova linha em $nomes, cada nome adicionado terá uma quebra de linha e será uma lista
   $nomes = "\n<li>" . $nomes . "</li>";
 
-  /* Concateno $nomes com $lista, assim todo nome que for adicionado no formulário, 
-  vai ser adicionado dentro de $lista, como estou usando (.=) os dados dentro de lista não serão alterados, 
+  /* Concateno $nomes com $lista, assim todo nome que for adicionado no formulário vai ser adicionado dentro de $lista, 
+  como estou usando (.=) os dados dentro de lista não serão alterados, 
   mas sim adicionados e tudo que for salvo em $nomes, será adicionado em $lista. */
   $nomes .= $lista;
 
   /* Salvando o conteúdo novo no meu arquivo nomes.txt junto do texto que já tinha antes, 
-  estou usando a variável $nomes porque agora que $nomesfoi concatenada com $lista, 
+  estou usando a variável $nomes porque agora que $nomes foi concatenada com $lista, 
   ao salvar em nomes o arquivo de $lista será atualizado. */
   file_put_contents('nomes.txt', $nomes);
 
