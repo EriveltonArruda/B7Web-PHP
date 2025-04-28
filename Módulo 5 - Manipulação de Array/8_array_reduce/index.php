@@ -2,14 +2,15 @@
 $numeros = [1, 2, 3, 4, 5];
 
 /* array_reduce pega o array que você passa pra ela e ai vai executar uma função para cada item dentro do array e vai reduzir para um item só, basicamente faz uma varredura no array.
-*/
 
-/* Parâmetros do Reduce
+Parâmetros do Reduce
 1º Eu passo o array que quero fazer a varredura
 2º Coloco o nome da função que vai agir em cima do meu array
-*/
-$total = array_reduce($numeros, 'total');
 
+$total = array_reduce($numeros, 'total');
+*/
+
+// usando na prática
 function somar($subtotal, $item) {
   /* Estou somando $subtotal + $item porque quero que seja feita a soma dos itens do meu array.
   na primeira varredura da função, $subtotal é 0, então no final da a primeira varredura ele passa a ser 1 (0 + 1 = 1), 
@@ -73,7 +74,7 @@ Um detalhe importante é que o array_reduce tem um terceiro parâmetro, esse ter
 */
 
 // Total de Homens
-function contar_m($subtotal, $item) {
+function conta_m($subtotal, $item) {
   /* já que meu terceiro parâmetro é 2, na primeira varredura $subtotal já vai
   começar como 2 e não como 0, então o resultado final vai ser alterado 
   porque minha contagem já vai começar como se já tivessem 2 homens */
@@ -85,4 +86,4 @@ function contar_m($subtotal, $item) {
   return $subtotal;
 };
 
-$total_m = array_reduce($pessoas, 'contar_m', 2);
+$total_m = array_reduce($pessoas, 'conta_m', 2);
