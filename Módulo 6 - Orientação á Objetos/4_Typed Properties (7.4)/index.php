@@ -1,5 +1,8 @@
 <?php
-/* “Propriedades tipadas” é um recurso que veio a partir do PHP 7.4, com ela eu consigo definir uma propriedade da minha classe para receber somente um determinado tipo de valor, por exemplo: a minha propriedade likes que simula os likes do facebook obviamente só deve receber números, mas digamos que eu definisse uma string para essa propriedade, o que aconteceria?
+/* “Propriedades tipadas” é um recurso que veio a partir do PHP 7.4, 
+com ela eu consigo definir uma propriedade da minha classe para receber somente um determinado tipo de valor, 
+por exemplo: a minha propriedade likes que simula os likes do facebook obviamente só deve receber números, 
+mas digamos que eu definisse uma string para essa propriedade, o que aconteceria?
 */
 class Post {
   public $likes = 0;
@@ -50,8 +53,8 @@ não ocorrerá erro algum, isso porque o PHP tenta reaproveitar o número para p
 $post1 = new Post();
 // Definindo uma string para author.
 $post1->author = "Erivelton \n";
-/* Definindo um número junto da string, por isso o (.=) para manter os dois 
-valores e assim ficar mais fácil de entender. */
+/* Definindo um número junto da string, por isso o (.=) para manter os dois valores 
+e assim ficar mais fácil de entender. */
 $post1->author .= 20;
 
 $post2 = new Post();
