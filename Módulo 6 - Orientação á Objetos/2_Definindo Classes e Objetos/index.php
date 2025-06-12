@@ -1,6 +1,8 @@
 <?php
 /*
-Classes são basicamente o modelo, primeiro definimos as características de um objeto que queremos criar, é que nem um carro, primeiro criamos a ideia e o modelo do carro e depois transformamos ele em um carro, com todas as suas características e propriedades, que no caso o carro seria um objeto.
+Classes são basicamente o modelo, primeiro definimos as características de um objeto que queremos criar,
+é que nem um carro, primeiro criamos a ideia e o modelo do carro e depois transformamos ele em um carro, 
+com todas as suas características e propriedades, que no caso o carro seria um objeto.
 
 Como resumo simples do que é classe e objeto:
 Classe é a ideia, o modelo.

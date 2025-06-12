@@ -1,9 +1,11 @@
 <?php
-// Propriedades são as características que uma classe vai ter, consequentemente o objeto também terá quando for criado a partir do modelo que contenha as propriedades.
+// Propriedades são as características que uma classe vai ter, 
+// consequentemente o objeto também terá quando for criado a partir do modelo que contenha as propriedades.
+
 // Uma classe pode ter vários tipos de propriedades
 
 /*
-Quando uma propriedade é pública na classe, eu posso acessar essa propriedade de fora da classe, 
+Quando uma propriedade é pública na classe, podemos acessar essa propriedade de fora da classe, 
 que é o que está sendo feito quando foi definida (alterada) a quantidade de likes do meu objeto por exemplo, 
 eu só consegui acessar e definir essa propriedade porque ela é pública na minha classe.
 */
@@ -20,13 +22,15 @@ $post1->likes = 3;
 $post2 = new Post();
 $post2->likes = 10;
 
-// Mesma coisa aqui, só consegui acessar porque a propriedade é pública.
+// Mesma coisa aqui, só conseguimos acessar porque a propriedade é pública.
 echo "POST 1: $post1->likes" . "<br/>";
 echo "POST 2: $post2->likes";
 
 // Propriedade Privada
 class PostPrivate {
-  // Propriedade Privada
+  // Se eu mudar a propriedade de like e colocar como privada, 
+  // eu não terei mais acesso à essa propriedade quando eu for exibir na tela com o meu echo.
+  // essa propriedade é usada apenas internamente, para não dar acesso ao mundo exterior, assim você protege a sua classe de interferência externa.
   private $likes = 0;
   public $comments = [];
   public $author;
@@ -49,8 +53,6 @@ class PostProtected {
 }
 
 $post1 = new PostProtected();
-
-
 $post2 = new PostProtected();
 
 
