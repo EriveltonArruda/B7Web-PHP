@@ -28,7 +28,7 @@ $totalDaSoma = -10.5;
 $total_da_semana = 10.5;
 */
 
-/* Strings
+/* Strings (sempre dentro de aspas)
 $nome = "Erivelton"; // Assim funciona
 echo $nome; // Exibe na tela a variável com o nome que está armazenado nela
 $nome = Erivelton; // Assim não
@@ -36,6 +36,7 @@ $nome = Erivelton; // Assim não
 
 // Comentários são ignorados pelo interpretador. Pode ser feito em uma linha com //
 // Comentário de uma linha, Ou em várias linhas com:
+
 /*
 Tudo que
 está aqui dentro

@@ -27,7 +27,7 @@ while ($numero < 10) {
 }
 */
 
-// Recriando o loop de cima, agora em for
+// Recriando o loop while acima, agora em for
 for ($numero = 0; $numero < 10; $numero++) {
   echo "N: " . $numero . "<br/>";
 }

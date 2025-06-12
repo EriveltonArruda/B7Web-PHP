@@ -1,4 +1,4 @@
-// Concatenação de variáveis.
+## Concatenação de variáveis.
 Concatenamos uma variável com outra no PHP utilizando o ponto (.) entre os valores;
 
 Dessa forma os nomes ficam juntos, então adicione um espaço no final da string nome ou um espaço no início da string do sobrenome, nunca nos espaço entre as variáveis concatenadas.

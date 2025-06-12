@@ -9,6 +9,8 @@ $ingredientes = [
 ];
 
 /* Exemplo Básico de foreach
+Na condição do foreach eu seleciono o array e coloco ele como “as” e defino uma variável, nesse caso o array será $ingredientes e essa variável nova $ingrediente vai fazer um loop dentro do array $ingredientes e a cada rodada do loop, $ingrediente vai assumir um valor de cada item, na primeira rodada será açúcar, na segunda será farinha de trigo e assim até o final do array.
+
 foreach ($ingredientes as $ingrediente) {
   echo "Item: " . $ingrediente . "<br/>";
 }

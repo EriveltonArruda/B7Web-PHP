@@ -32,8 +32,3 @@ switch ($tipo) {
   default:
     echo 'Você não inseriu nenhuma das opções, apenas são permitidos: FOTO, VIDEO, TEXTO';
 };
-
-/*
-Resultado:
-Exibindo FOTO;
-*/
