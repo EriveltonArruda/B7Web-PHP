@@ -1,5 +1,4 @@
 <?php
-
 // Estrutura da função
 function somar($n1, $n2) { // Parâmetro dentro dos parênteses
   $total = $n1 + $n2; // Ação da função (somar $n1 + $n2)
@@ -8,7 +7,7 @@ function somar($n1, $n2) { // Parâmetro dentro dos parênteses
 
 // atribuindo à uma variável
 $soma = somar(10, 5); // $n1 assumirá 10 e $n2 assumirá 5
-echo "TOTAL: " . $soma . "<br/>"; /* exibe na tela o valor da variável que está chamando a função */
+echo "TOTAL: " . $soma . "<br/>"; // exibe na tela o valor da variável que está chamando a função
 
 // Sem atribuir à variável
 echo somar(10, 5); // se quiser exibir somente o resultado sem concatenar com string.

@@ -13,7 +13,7 @@ Após a divisão acima, se a variável $metade for acima de 0, então ela vai
 repetir a função até que chegue em 0 (a função round() vai arredondar o resultado)*/
   if (round($metade) > 0) {
     dividir($metade);
-  }
-}
+  };
+};
 
 dividir(100);

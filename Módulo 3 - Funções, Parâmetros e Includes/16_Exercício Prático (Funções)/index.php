@@ -1,7 +1,9 @@
 <?php
 /*
-O exercício é fazer uma função que vai receber uma string com uma data no formato internacional e essa função vai retornar a data convertida para o padrão nacional e o dia da semana em português.
+O exercício é fazer uma função que vai receber uma string com uma data no formato internacional 
+e essa função vai retornar a data convertida para o padrão nacional e o dia da semana em português.
 */
+
 // SOLUÇÃO 1
 // criando a função
 function diaDaSemana(string $data) {
@@ -12,12 +14,12 @@ function diaDaSemana(string $data) {
   // convertendo a data para o padrão nacional utilizando os milisegundos acima
   echo date("d/m/Y - ", $time);
 
-  /* criando o dia que será transformado de inglês para português utilizando 
-  o parâmetro 'D', que é uma representação textual de um dia, três letras.
+  /* criando o dia que será transformado de inglês para português utilizando o parâmetro 'D', 
+  que é uma representação textual de um dia, três letras.
   */
   $dia = date('D', strtotime($data));
 
-  /* Então em um switch eu coloco as três letras em inglês e coloco a tradução 
+  /* em um switch eu coloco as três letras em inglês e coloco a tradução 
   delas abaixo. */
   switch ($dia) {
     case 'Sun':

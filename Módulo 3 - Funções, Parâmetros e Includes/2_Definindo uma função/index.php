@@ -1,7 +1,6 @@
 <?php
-/* 
-Aqui estamos somente criando a função, para usá-la, preciso chamar no código 
-*/
+// Aqui estamos somente criando a função, para usá-la, preciso chamar no código
+
 // criando a função
 function subsequente() {
   /* loop que começa em 0 e a cada loop adicionará 1 número até que esse número 

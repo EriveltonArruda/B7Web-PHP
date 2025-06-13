@@ -9,9 +9,9 @@ $x = 3;
 $y = 2;
 $soma = 0;
 somar($x, $y, $soma); /* soma era 0 e agora se tornou 5 porque entrou como 
-referência no parâmetro e dentro da função foi reassignado e agora passou a ser a soma de $n1 + $n2, então a variável fora ($soma) também foi alterada porque 
-pegou o valor de $total ao ser passada como parâmetro, $soma basicamente se 
-tornou um espelho de $total.
+referência no parâmetro e dentro da função foi reassignado e agora passou a ser a soma de $n1 + $n2, 
+então a variável fora ($soma) também foi alterada porque pegou o valor de $total ao ser passada como parâmetro, 
+$soma basicamente se tornou um espelho de $total.
 */
 
 echo "TOTAL: " . $soma; // Resultado: TOTAL: 5;
@@ -33,12 +33,12 @@ echo $x . ' + ' . $y . ' = ' . $soma;
 
 //Resultado:
 // 3 + 2 = 25; 
-/* Aqui deu 25 porque como $soma é um espelho de $total, $soma recebeu o valor 
-de $total que está dentro da função ($total = $n1 + $n2) Ou seja: 25;
-Isso quer dizer que quando um parâmetro é referenciado, ele é alterado fora
-da função também. */
+/* Aqui deu 25 porque como $soma é um espelho de $total, 
+$soma recebeu o valor de $total que está dentro da função ($total = $n1 + $n2), Ou seja: 25;
+Isso quer dizer que quando um parâmetro é referenciado, ele é alterado fora da função também. */
 
-// O parâmetro da função sort() usa valores como referência, ou seja, a função vai ordenar as variáveis e não vai alterar seu valor.
+// O parâmetro da função sort() usa valores como referência, ou seja, 
+// a função vai ordenar as variáveis e não vai alterar seu valor.
 $lista = [4, 9, 2];
 
 sort($lista);
