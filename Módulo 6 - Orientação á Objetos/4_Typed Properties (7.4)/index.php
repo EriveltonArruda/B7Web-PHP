@@ -48,9 +48,9 @@ $post2 = new PostTyped();
 echo "POST 1: $post1->likes" . "<br/>";
 echo "POST 2: $post2->likes";
 
+$post1 = new Post();
 /* Uma observação importante sobre a string é que se eu definir alguma propriedade como string e definir um número à essa propriedade, 
 não ocorrerá erro algum, isso porque o PHP tenta reaproveitar o número para poder transformar em uma string com aquele número, por exemplo: */
-$post1 = new Post();
 // Definindo uma string para author.
 $post1->author = "Erivelton \n";
 /* Definindo um número junto da string, por isso o (.=) para manter os dois valores 

@@ -12,7 +12,6 @@ $texto = file_get_contents('texto.txt');
 // exibindo o texto na tela
 echo $texto;
 
-
 // Podemos manipular o texto usando o explode() //
 $texto = file_get_contents('texto.txt');
 

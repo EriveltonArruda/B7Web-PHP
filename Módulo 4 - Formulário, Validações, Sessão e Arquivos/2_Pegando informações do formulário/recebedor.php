@@ -20,7 +20,9 @@ $nome = filter_input(INPUT_POST, "nome"); // $nome agora vai ser o nome que pega
 // Também quero exibir a idade além do nome
 $idade = filter_input(INPUT_POST, "idade");
 
-// pode usar tabela verdade também se quiser, assim só entrará na condição se AMBOS estiverem preenchidos - if ($nome && $idade), mas vamos deixar somente o nome
+// pode usar tabela verdade também se quiser, 
+// assim só entrará na condição se AMBOS estiverem preenchidos - 
+// if ($nome && $idade), mas vamos deixar somente o nome
 if ($nome) {
   // Se nome foi preenchido, vai mostrar o nome que foi colocado no campo nome
   echo "NOME:" . $nome;

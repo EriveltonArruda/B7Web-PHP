@@ -6,7 +6,7 @@ $texto = "PHP Não está morto e é ótimo para conseguir a primeira vaga!";
 se o arquivo já existir, a função vai substituir o arquivo.
 
 Essa função tem 2 parâmetros:
-1º é o nome do arquivo
+1º o nome do arquivo
 2º o conteúdo.
 
 file_put_contents(1º Parâmetro, 2º Parâmetro);
@@ -19,7 +19,6 @@ file_put_contents('nome.txt', $texto);
 echo "Arquivo criado com sucesso! <br/>";
 
 // Para que o arquivo seja criado, é necessário abrir a página no navegador.
-
 
 // Podemos adicionar textos em arquivos que já contém outros textos, por exemplo:
 // Lendo o conteúdo de texto.txt
