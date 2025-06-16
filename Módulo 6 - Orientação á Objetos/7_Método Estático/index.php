@@ -7,7 +7,12 @@ class Matematica {
   }
 }
 
-/* Mas para que serve um método estático? Assim que criarmos um método estático, não é necessário mais instanciar um objeto para depois usar o método que está dentro da classe, para usar uma função estática, tudo que temos que fazer é referenciar a classe à qual o método pertence, por exemplo: */
+/* 
+Mas para que serve um método estático? Assim que criarmos um método estático, 
+não é necessário mais instanciar um objeto para depois usar o método que está dentro da classe, 
+para usar uma função estática, tudo que temos que fazer é referenciar a classe à qual o método pertence, 
+por exemplo: 
+*/
 
 // Sem método estático
 // Preciso instanciar primeiro
@@ -25,8 +30,6 @@ class Property {
   public static string $nome = "Erivelton";
 }
 
-/* Para acessar essa propriedade fazemos da mesma forma que fizemos no 
-método:
-Acesse um método ou propriedade que está dentro da classe referenciada 
-anteriormente (Matematica) */
+/* Para acessar essa propriedade fazemos da mesma forma que fizemos no método:
+Acesse um método ou propriedade que está dentro da classe referenciada anteriormente (Property) */
 echo Property::$nome;
