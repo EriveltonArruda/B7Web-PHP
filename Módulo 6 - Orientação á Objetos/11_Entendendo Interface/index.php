@@ -62,7 +62,7 @@ mas a função é a mesma, então nesse caso específico é interessante criar a
 interface Database {
   /* quando usamos interface não definimos nada nos métodos, apenas mostramos
   o que cada classe terá, por exemplo: todas as classes de database que forem
-  criadas, terão que ter esses três métodos abaixo. */
+  criadas, terão que ter esses quatro métodos abaixo. */
   public function listarProdutos();
   public function adicionarProduto();
   public function alterarProduto();
@@ -107,7 +107,7 @@ class OracleDBData implements Database {
 $db = new OracleDBData();
 $db->adicionarProduto();
 
-/* A necessidade dessa interface serve apenas como organização, tipo um contrato, um guia a ser seguido na criação das classes, para entender melhor, vamos supor que vou usar um terceiro banco de dados e contratei uma empresa para criar essa classe com o novo banco de dados, mas por algum motivo o programador responsável pela criação só usou dois métodos e esqueceu de usar o método adicionar produto, ocorrerá um erro porque a interface obriga que tenha o método adiccionar produto. */
+/* A necessidade dessa interface serve apenas como organização, tipo um contrato, um guia a ser seguido na criação das classes, para entender melhor, vamos supor que vou usar um terceiro banco de dados e contratei uma empresa para criar essa classe com o novo banco de dados, mas por algum motivo o programador responsável pela criação só usou dois métodos e esqueceu de usar o método adicionar produto, ocorrerá um erro porque a interface obriga que tenha o método adicionar e remover produto. */
 class MongoDB implements Database {
   public function listarProdutos() {
   }
